@@ -1093,7 +1093,15 @@ body.is-loaded .word>span{transform:translateY(0)}
 .final-cta__hi{display:flex;align-items:center;justify-content:center;gap:clamp(10px,1.6vw,18px);margin:8px 0 22px;font-size:clamp(24px,3.3vw,46px);line-height:1.3;color:var(--ink)}
 .final-cta__hi::before,.final-cta__hi::after{content:"";flex:none;width:clamp(22px,5vw,64px);height:1.5px;background:var(--ink);opacity:.5}
 .footer__place .hi{margin-left:.28em;font-size:.82em;color:var(--yellow-pop)}
+.footer__credit .hi{margin:0 4px;color:var(--yellow-pop);font-family:var(--deva)}
 .mobile-menu__nav a .hi{margin-left:auto;font-size:.5em;color:var(--muted)}
+.nav-hi{display:inline-block;margin-left:4px;font-size:11.5px;color:var(--muted);font-weight:400;font-family:var(--deva);transition:color .2s}
+.desktop-nav a:hover .nav-hi,.desktop-nav a.is-active .nav-hi{color:var(--blue)}
+.track-card__hi{display:block;font-size:13.5px;color:var(--muted);font-family:var(--deva);margin-bottom:3px}
+.travel-card h4 .hi{display:inline-block;margin-left:6px;font-size:13px;font-weight:400;color:var(--muted);font-family:var(--deva)}
+.chip-hi{margin-left:6px;font-size:11.5px;opacity:.75;font-family:var(--deva)}
+.stat small .hi,.hero__stats small .hi{display:inline-block;margin-left:3px;font-family:var(--deva);font-size:11.5px;color:var(--muted)}
+.speakers__marquee-track .hi{font-family:var(--deva);font-size:16px;line-height:1;margin:0 6px}
 @media (max-width:1020px){
   .float-sticker--hindi{left:auto;right:22%;top:2%}
 }
