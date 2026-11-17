@@ -376,13 +376,42 @@ body.is-loaded .word>span{transform:translateY(0)}
 .hero__scroll-line{width:1px;height:34px;background:var(--line-strong);position:relative;overflow:hidden}
 .hero__scroll-line::after{content:"";position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--ink);animation:scrollLine 2s var(--ease) infinite}
 
-.float-sticker{position:absolute;z-index:1;border:1.5px solid var(--ink);background:var(--paper);display:grid;place-items:center;will-change:transform;pointer-events:none}
-.float-sticker--lotus{right:3.5%;top:19%;width:64px;height:64px;border-radius:50%;background:var(--blue-soft);transform:rotate(9deg);animation:bob 8s ease-in-out infinite}
-.float-sticker--lotus .ic{width:30px;height:30px;stroke-width:1.5}
-.float-sticker--pill{left:2.2%;bottom:25%;padding:8px 14px;border-radius:999px;background:var(--red-soft);font-family:var(--mono);font-size:9px;letter-spacing:.1em;transform:rotate(-9deg);animation:bob 9s ease-in-out infinite reverse}
-.float-sticker--brace{right:4%;bottom:18%;font-family:var(--serif);font-size:38px;padding:4px 12px;border-radius:16px;background:var(--yellow-soft);transform:rotate(-6deg);animation:bob 7s ease-in-out infinite}
-.float-sticker--hindi{left:38%;top:2.5%;font-family:var(--deva);font-size:28px;padding:2px 10px;border-radius:12px;background:var(--green-soft);transform:rotate(6deg);animation:bob 10s ease-in-out infinite}
-.float-sticker--dot{right:8%;top:8%;padding:7px 11px;border-radius:999px;font-family:var(--mono);font-size:9px;letter-spacing:.08em;background:var(--paper);transform:rotate(7deg)}
+.float-sticker{position:absolute;z-index:1;border:1.5px solid var(--ink);background:var(--paper);display:grid;place-items:center;will-change:transform;pointer-events:none;box-shadow:3px 3px 0 rgba(30,30,30,.08);transition:box-shadow .3s}
+
+/* Left side stickers */
+.float-sticker--boat{left:3.2%;top:7%;width:50px;height:50px;border-radius:50%;background:var(--blue-soft);transform:rotate(6deg);animation:bob 8.5s ease-in-out infinite}
+.float-sticker--boat .ic{width:24px;height:24px;stroke-width:1.6}
+
+.float-sticker--android{left:2.2%;top:24%;width:56px;height:56px;border-radius:50%;background:var(--green-soft);color:var(--green);transform:rotate(-9deg);animation:bob 7.5s ease-in-out infinite reverse}
+.float-sticker--android .ic{width:28px;height:28px}
+
+.float-sticker--prompt{left:1.8%;top:50%;width:50px;height:46px;border-radius:12px;background:var(--yellow-soft);color:var(--ink);transform:rotate(8deg);animation:bob 9s ease-in-out infinite}
+.float-sticker--prompt .ic{width:24px;height:24px;stroke-width:2.2}
+
+.float-sticker--gdg{left:2.6%;bottom:12%;padding:6px 12px;border-radius:999px;background:var(--paper);transform:rotate(-6deg);animation:bob 8s ease-in-out infinite reverse}
+.float-sticker--gdg .ic{width:26px;height:18px}
+
+.float-sticker--hindi{left:36%;top:2.5%;font-family:var(--deva);font-size:26px;padding:2px 10px;border-radius:12px;background:var(--green-soft);transform:rotate(6deg);animation:bob 10s ease-in-out infinite}
+
+/* Right side stickers */
+.float-sticker--dot{right:6.5%;top:5%;padding:7px 11px;border-radius:999px;font-family:var(--mono);font-size:9px;letter-spacing:.08em;background:var(--paper);transform:rotate(7deg)}
+
+.float-sticker--diya{right:1.6%;top:15%;width:52px;height:52px;border-radius:50%;background:var(--yellow-soft);transform:rotate(11deg);animation:bob 8s ease-in-out infinite}
+.float-sticker--diya .ic{width:25px;height:25px;stroke-width:1.6}
+
+.float-sticker--lotus{right:3.8%;top:31%;width:58px;height:58px;border-radius:50%;background:var(--blue-soft);transform:rotate(8deg);animation:bob 8.5s ease-in-out infinite reverse}
+.float-sticker--lotus .ic{width:27px;height:27px;stroke-width:1.5}
+
+.float-sticker--cloud{right:1.8%;top:47%;width:54px;height:48px;border-radius:14px;background:var(--blue-soft);color:var(--blue);transform:rotate(-7deg);animation:bob 9.5s ease-in-out infinite}
+.float-sticker--cloud .ic{width:26px;height:26px}
+
+.float-sticker--code{right:4.8%;top:63%;width:52px;height:52px;border-radius:50%;background:var(--red-soft);color:var(--red);transform:rotate(9deg);animation:bob 7s ease-in-out infinite reverse}
+.float-sticker--code .ic{width:24px;height:24px;stroke-width:1.8}
+
+.float-sticker--brace{right:2.4%;bottom:13%;font-family:var(--serif);font-size:36px;padding:3px 12px;border-radius:14px;background:var(--yellow-soft);transform:rotate(-6deg);animation:bob 7.5s ease-in-out infinite}
+
+.float-sticker--wave{right:7%;bottom:4%;padding:6px 12px;border-radius:999px;background:var(--green-soft);color:var(--green);transform:rotate(5deg);animation:bob 8.5s ease-in-out infinite reverse}
+.float-sticker--wave .ic{width:22px;height:22px;stroke-width:1.8}
 
 /* ---------- Ribbon ---------- */
 .ribbon{
@@ -881,14 +910,18 @@ body.is-loaded .word>span{transform:translateY(0)}
 @media (max-width:1180px){
   .hero__inner{grid-template-columns:1.08fr .92fr;gap:38px}
   .hero-poster{width:min(390px,100%)}
-  .float-sticker--pill{left:0;bottom:16%}
-  .float-sticker--hindi{left:36%}
+  .float-sticker{transform:scale(.85)}
+  .float-sticker--android{left:1%;top:26%}
+  .float-sticker--prompt{left:1%;top:52%}
+  .float-sticker--gdg{left:1%;bottom:10%}
+  .float-sticker--diya{right:1%;top:14%}
+  .float-sticker--cloud{right:1%;top:48%}
   .track-grid{grid-template-columns:repeat(2,1fr)}
   .track-card{min-height:340px}
   .team-grid{grid-template-columns:repeat(4,1fr)}
 }
 @media (min-width:1021px) and (max-width:1240px){
-  .float-sticker--lotus,.float-sticker--brace{display:none}
+  .float-sticker--code,.float-sticker--wave,.float-sticker--prompt{display:none}
 }
 @media (max-width:1020px){
   .desktop-nav{display:none}
@@ -900,8 +933,13 @@ body.is-loaded .word>span{transform:translateY(0)}
   .hero__visual{order:2;padding-bottom:42px}
   .hero-poster{width:min(430px,80vw);margin-inline:auto}
   .hero__scroll{display:none}
-  .float-sticker--lotus{top:12%}
-  .float-sticker--dot{top:5%}
+  .float-sticker--boat,.float-sticker--prompt,.float-sticker--code,.float-sticker--wave,.float-sticker--cloud{display:none}
+  .float-sticker--android{left:4%;top:4%}
+  .float-sticker--gdg{left:4%;bottom:8%}
+  .float-sticker--lotus{right:4%;top:12%}
+  .float-sticker--dot{right:8%;top:5%}
+  .float-sticker--diya{right:4%;top:26%}
+  .float-sticker--brace{right:4%;bottom:8%}
   .countdown-band__inner{grid-template-columns:1fr;gap:26px;align-items:start}
   .countdown-band__actions{flex-direction:row;align-items:center;gap:16px}
   .section-head--split{grid-template-columns:1fr;gap:22px;align-items:start}
