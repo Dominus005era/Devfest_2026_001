@@ -88,6 +88,8 @@
       if (e.target.closest(hoverables)) cursor.classList.remove('is-hover');
     });
     document.addEventListener('pointerleave', () => cursor.classList.remove('is-active'));
+    document.addEventListener('pointerenter', () => { if (active) cursor.classList.add('is-active'); });
+    window.addEventListener('blur', () => cursor.classList.remove('is-active'));
   }
 
   /* ---------------------------------------------------------
