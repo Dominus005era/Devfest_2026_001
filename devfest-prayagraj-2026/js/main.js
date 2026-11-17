@@ -135,7 +135,11 @@
         revealObserver.unobserve(entry.target);
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
-    items.forEach((el) => revealObserver.observe(el));
+    items.forEach((el) => {
+      // hero copy is above the fold: show it without waiting for a scroll
+      if (el.closest('.hero__copy')) el.classList.add('is-visible');
+      else revealObserver.observe(el);
+    });
   };
 
   /* ---------------------------------------------------------
