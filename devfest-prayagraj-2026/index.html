@@ -87,6 +87,22 @@
   <symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 7q2.5-3 5 0t5 0 5 0 5 0M2 12q2.5-3 5 0t5 0 5 0 5 0M2 17q2.5-3 5 0t5 0 5 0 5 0"/></symbol>
   <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 4c2.6 3.2 2.6 8.4 0 12-2.6-3.6-2.6-8.8 0-12Z"/><path d="M12 16c-4.2 0-7.6-2.6-8.6-7 3.2.2 5.6 1.6 6.9 4M12 16c4.2 0 7.6-2.6 8.6-7-3.2.2-5.6 1.6-6.9 4M5 20h14"/></symbol>
   <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></symbol>
+  <symbol id="av-base" viewBox="0 0 100 100">
+    <path d="M12 102c0-20 15-31 38-31s38 11 38 31Z" style="fill:var(--av-shirt,#4285F4)" stroke="#1E1E1E" stroke-width="2.5"/>
+    <path d="M41 60h18v13a9 9 0 0 1-18 0Z" fill="#E8B88A" stroke="#1E1E1E" stroke-width="2.5"/>
+    <path d="M40 73 50 90l10-17" fill="none" stroke="#1E1E1E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="44.5" y="88" width="11" height="9" rx="2" fill="#FFFDF6" stroke="#1E1E1E" stroke-width="2"/>
+    <circle cx="30.5" cy="46" r="4.5" fill="#E8B88A" stroke="#1E1E1E" stroke-width="2.5"/>
+    <circle cx="69.5" cy="46" r="4.5" fill="#E8B88A" stroke="#1E1E1E" stroke-width="2.5"/>
+    <ellipse cx="50" cy="44" rx="19.5" ry="22" fill="#E8B88A" stroke="#1E1E1E" stroke-width="2.5"/>
+    <ellipse cx="42.5" cy="45" rx="2.2" ry="2.8" fill="#1E1E1E"/>
+    <ellipse cx="57.5" cy="45" rx="2.2" ry="2.8" fill="#1E1E1E"/>
+    <path d="M43 54.5c4 4 10 4 14 0" fill="none" stroke="#1E1E1E" stroke-width="2.4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="av-h1" viewBox="0 0 100 100"><path d="M30 41c-3-17 7-25 21-25s23 8 19 25c-2-8-7-12-15-13-8 3-18 4-25 13Z" fill="#1E1E1E"/></symbol>
+  <symbol id="av-h2" viewBox="0 0 100 100"><path d="M30 42c-5-6-4-15 2-18 1-7 9-10 14-7 5-4 13-2 15 3 7 1 11 9 7 15 2 3 2 5 2 7-3-6-7-9-11-10-6 3-13 3-19 0-4 1-8 4-10 10Z" fill="#1E1E1E"/></symbol>
+  <symbol id="av-h3" viewBox="0 0 100 100"><path d="M30 41c-2-16 7-24 20-24s22 8 20 24c-4-7-9-11-14-12-9 1-19 3-26 12Z" fill="#1E1E1E"/><g fill="none" stroke="#1E1E1E" stroke-width="2.4"><circle cx="42" cy="45.5" r="6.5"/><circle cx="58" cy="45.5" r="6.5"/><path d="M48.5 45.5h3M35.5 45l-5-1.5M64.5 45l5-1.5"/></g></symbol>
+  <symbol id="av-h4" viewBox="0 0 100 100"><path d="M29 38c0-15 9-23 21-23s21 8 21 23Z" style="fill:var(--av-shirt,#4285F4)" stroke="#1E1E1E" stroke-width="2.5" stroke-linejoin="round"/><path d="M27 38h46" stroke="#1E1E1E" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="13.5" r="3.5" fill="#1E1E1E"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></symbol>
   <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></symbol>
@@ -752,6 +768,55 @@
             <h3>First-time voice</h3>
             <p>Your first talk, our stage. We’ll pair you with a mentor and a rehearsal room.</p>
             <span class="slot-card__foot">Applications open</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="speaker-wall">
+        <div class="speaker-wall__head" data-reveal>
+          <h3>A taste of the <em>stage.</em></h3>
+          <span class="speaker-wall__badge">Sample line-up · placeholder speakers</span>
+        </div>
+        <div class="speaker-wall__grid">
+          <article class="speaker-card speaker-card--blue tilt" data-reveal>
+            <div class="speaker-card__top">
+              <svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#av-base"/><use href="#av-h1"/></svg>
+              <span class="speaker-card__track">AI</span>
+            </div>
+            <h4>Aarav Mehta</h4>
+            <p class="speaker-card__role">ML engineer · Bengaluru</p>
+            <p class="speaker-card__talk">“Shipping Gemini agents that survive production”</p>
+            <span class="speaker-card__foot">Talk · 25 min</span>
+          </article>
+          <article class="speaker-card speaker-card--green tilt" data-reveal style="--d:70ms">
+            <div class="speaker-card__top">
+              <svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#av-base"/><use href="#av-h3"/></svg>
+              <span class="speaker-card__track">Cloud</span>
+            </div>
+            <h4>Ishita Rao</h4>
+            <p class="speaker-card__role">Cloud architect · Pune</p>
+            <p class="speaker-card__talk">“Zero to scale on Cloud Run, without the bill shock”</p>
+            <span class="speaker-card__foot">Talk · 25 min</span>
+          </article>
+          <article class="speaker-card speaker-card--yellow tilt" data-reveal style="--d:140ms">
+            <div class="speaker-card__top">
+              <svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#av-base"/><use href="#av-h2"/></svg>
+              <span class="speaker-card__track">Android</span>
+            </div>
+            <h4>Kabir Anand</h4>
+            <p class="speaker-card__role">Android developer · Lucknow</p>
+            <p class="speaker-card__talk">“Compose, adaptive layouts and the foldable future”</p>
+            <span class="speaker-card__foot">Workshop · 60 min</span>
+          </article>
+          <article class="speaker-card speaker-card--red tilt" data-reveal style="--d:210ms">
+            <div class="speaker-card__top">
+              <svg class="av" viewBox="0 0 100 100" aria-hidden="true"><use href="#av-base"/><use href="#av-h4"/></svg>
+              <span class="speaker-card__track">Web</span>
+            </div>
+            <h4>Naina Kapoor</h4>
+            <p class="speaker-card__role">Web performance lead · Delhi</p>
+            <p class="speaker-card__talk">“Fast by default: the modern web platform in 2026”</p>
+            <span class="speaker-card__foot">Talk · 25 min</span>
           </article>
         </div>
       </div>
