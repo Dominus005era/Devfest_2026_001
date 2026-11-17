@@ -556,23 +556,26 @@
       return [lines.slice(0, lines.length - 1).join(' '), lines[lines.length - 1]];
     };
 
-    const drawStar = (cx, cy, r, color) => {
+    const drawWaveSticker = (cx, cy, r, color) => {
       ctx.save();
       ctx.translate(cx, cy);
       ctx.beginPath();
-      for (let i = 0; i < 8; i++) {
-        const angle = (Math.PI / 4) * i;
-        const rr = i % 2 === 0 ? r : r * 0.28;
-        const x = Math.cos(angle) * rr;
-        const y = Math.sin(angle) * rr;
-        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-      }
-      ctx.closePath();
+      ctx.arc(0, 0, r, 0, Math.PI * 2);
       ctx.fillStyle = color;
       ctx.fill();
       ctx.strokeStyle = INK;
       ctx.lineWidth = 3;
       ctx.stroke();
+      ctx.lineCap = 'round';
+      ctx.lineWidth = 4;
+      [-13, 0, 13].forEach((oy) => {
+        ctx.beginPath();
+        for (let x = -r * 0.56; x <= r * 0.56; x += 2) {
+          const y = oy + Math.sin((x / r) * Math.PI * 2.4) * 4;
+          if (x === -r * 0.56) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      });
       ctx.restore();
     };
 
@@ -749,8 +752,8 @@
       });
       ctx.restore();
 
-      // star sticker
-      drawStar(848, 770, 44, YELLOW);
+      // river sticker
+      drawWaveSticker(848, 770, 44, YELLOW);
 
       // bottom rule
       ctx.strokeStyle = 'rgba(30,30,30,.35)';
